@@ -1,0 +1,16 @@
+<%= turbo_stream_from :posts %>
+
+<%= turbo_frame_tag :post_form do %>
+  <%= render 'posts/form', post: @post %>
+<% end %>
+
+<%= turbo_frame_tag :posts do %>
+  <h5>Posts Frame</h5>
+  <%= render @posts %>
+<% end %>
+
+<hr>
+<%= turbo_frame_tag :list_posts do %>
+  <h5>List Posts Frame</h5>
+  <%= render @posts %>
+<% end %>

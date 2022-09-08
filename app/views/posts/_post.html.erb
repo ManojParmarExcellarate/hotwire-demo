@@ -1,0 +1,7 @@
+<div style="background: lightgrey; width: 300px; padding: 10px;">
+  <%= post.body %>
+  <br>
+  <%= link_to :edit, edit_post_path(post) %>
+  <%= button_to "likes (#{post.likes || 0})", post_path(post, like: true), method: :put %>
+</div>
+<br>
